@@ -37,13 +37,14 @@ def display_matrix(A, zeroes="0", fmt="d", col_width=None):
         row_str += "]"
         print(row_str)
 
-A, B = gen_inverse()
+def deflt(inp, val=3):
+    if inp == "":
+        return val
+    else:
+        return int(inp)
+
+n = deflt(input("Square Matrix Dimension (Default=3): "))
+A, B = gen_inverse(n=n)
 display_matrix(A)
 input("Enter for inverse ...")
 display_matrix(B)
-# for _ in range(4):
-#     A, B = gen_inverse()
-#     display_matrix(A)
-#     print()
-#     display_matrix(B)
-#     print('-'*20)
