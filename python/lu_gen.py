@@ -37,11 +37,11 @@ def display_matrix(A, zeroes="0", fmt="d", col_width=None):
 Problem = namedtuple("Problem", { "A", "L", "U" })
 
 def gen():
-    dim_in = input("Dimension (Default 4):")
+    dim_in = input("Dimension (Default 4): ")
     prblm = gen_problem(dim=4)
     if dim_in != "":
         prblm = gen_problem(int(dim_in))
-    print("A matrix:")
+    print("A matrix =")
     display_matrix(prblm.A, zeroes=".")
     input("Enter for L ...")
     display_matrix(prblm.L, zeroes=" ")
